@@ -67,8 +67,8 @@ jobs:
           containerfiles: ./Containerfile
           image: ${{ env.IMAGE_NAME }}-${{ matrix.base.name }}
           tags: |
-            type=raw,value=latest
-            type=raw,value=latest.{{date 'YYYYMMDD'}}
+            latest
+            latest.${{date 'YYYYMMDD'}}
           labels: ${{ steps.metadata.outputs.labels }}
           oci: false
           build-args: UBLUE_BASE_IMAGE=${{ matrix.base.image }}
