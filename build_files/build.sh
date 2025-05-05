@@ -23,4 +23,4 @@ set -ouex pipefail
 # systemctl enable podman.socket
 
 dnf5 -y copr enable ryanabx/cosmic-epoch
-dnf5 install cosmic-desktop
+dnf5 -y install cosmic-desktop
